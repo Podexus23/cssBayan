@@ -13,4 +13,30 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #555;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  max-width: 108rem;
+  width: 100%;
+  background-color: aquamarine;
+  margin: 0 auto;
+}
+
+.slide:hover {
+  height: 100%;
+}
+
+.slide:has(input:checked) .slide-wrapper {
+  background-color: blueviolet;
+}
+
+label:target {
+  background-color: bisque;
+}
+
+.slide-wrapper {
+  border: 1px solid slateblue;
 }
