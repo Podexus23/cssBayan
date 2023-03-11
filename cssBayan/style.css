@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 html {
   font-size: 62.5%;
 }
@@ -25,18 +30,14 @@ body {
   margin: 0 auto;
 }
 
-.slide:hover {
-  height: 100%;
+.slide {
+  cursor: pointer;
 }
 
-.slide:has(input:checked) .slide-wrapper {
-  background-color: blueviolet;
-}
-
-label:target {
+.slide input:checked + .slide-wrapper {
   background-color: bisque;
 }
 
-.slide-wrapper {
-  border: 1px solid slateblue;
+.slide-wrapper:hover {
+  background-color: cornflowerblue;
 }
