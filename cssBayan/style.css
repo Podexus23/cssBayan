@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.visually-hidden {
+  display: none;
+
+  transform: scale(0);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.header {
+  padding: 1rem;
+}
+
+.slide-wrapper .wide {
+  max-width: 80rem;
+}
+
+.slides {
+  color: cornflowerblue;
+  border: 0.1rem solid #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0rem 0rem 1.5rem 0.7rem #e5e5e5;
+  transition: color 0.2s;
+}
+
+.slides:hover {
+  color: black;
+}
+
+.slides i {
+  display: none;
+}
+
+.slides:hover i {
+  display: inline;
+}
+
+.header-title {
+  font-size: 3.6rem;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.wrapper {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slide {
+  cursor: pointer;
+}
+
+.slide-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 6rem;
+  overflow: hidden;
+  transition: height 0.5s, transform 0.5s, background-color 0.3s;
+  border-bottom: 0.1rem solid #dfdfdf;
+}
+
+.slide-wrapper i {
+  transform: rotate(135deg);
+  transition: transform 0.5s;
+}
+
+input:checked + .slide-wrapper i,
+.slide-wrapper:hover i {
+  transform: rotate(0deg);
+}
+
+.slide-wrapper img {
+  max-width: 40rem;
+  max-height: 40rem;
+  height: 100%;
+  align-self: center;
+}
+
+input:checked + .slide-wrapper,
+.slide-wrapper:hover {
+  color: black;
+  height: 50rem;
+}
+
+input:active + .slide-wrapper {
+  background-color: aquamarine;
+  cursor: -webkit-grab;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+.slide-wrapper div {
+  font-size: 2rem;
+  padding: 2rem 2rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (min-width: 65rem) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 65rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 40rem) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .slide-wrapper .wide {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  html {
+    font-size: 28%;
+  }
+}
