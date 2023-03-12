@@ -33,10 +33,11 @@ body {
 }
 
 .slides {
-  color: #5a5a5a;
+  color: cornflowerblue;
   border: 0.1rem solid #fff;
   border-radius: 1.5rem;
-  box-shadow: 0px 0px 15px 7px #e5e5e5;
+  box-shadow: 0rem 0rem 1.5rem 0.7rem #e5e5e5;
+  transition: color 0.2s;
 }
 
 .slides:hover {
@@ -76,17 +77,9 @@ body {
   flex-direction: column;
   height: 6rem;
   overflow: hidden;
-  transition: height 0.5s, transform 0.5s;
-  border-bottom: 1px solid #dfdfdf;
+  transition: height 0.5s, transform 0.5s, background-color 0.3s;
+  border-bottom: 0.1rem solid #dfdfdf;
 }
-
-/* input:checked + .slide-wrapper {
-  background-color: bisque;
-}
-
-.slide-wrapper:hover {
-  background-color: cornflowerblue;
-} */
 
 .slide-wrapper i {
   transform: rotate(135deg);
@@ -107,7 +100,15 @@ input:checked + .slide-wrapper i,
 
 input:checked + .slide-wrapper,
 .slide-wrapper:hover {
+  color: black;
   height: 50rem;
+}
+
+input:active + .slide-wrapper {
+  background-color: aquamarine;
+  cursor: -webkit-grab;
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
 }
 
 .slide-wrapper div {
@@ -117,4 +118,33 @@ input:checked + .slide-wrapper,
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (min-width: 65rem) {
+  html {
+    font-size: 70%;
+  }
+}
+@media (max-width: 65rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 40rem) {
+  html {
+    font-size: 35%;
+  }
+}
+
+@media (max-width: 30rem) {
+  .slide-wrapper .wide {
+    max-width: 70rem;
+  }
+}
+
+@media (max-width: 25rem) {
+  html {
+    font-size: 28%;
+  }
 }
